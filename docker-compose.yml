@@ -1,0 +1,20 @@
+version: !!str 3
+services:
+  fileExporter:
+    build: .
+    image: exporter:1
+    restart: unless-stopped
+    environment:
+      - "FILE_EXPORTER_PATH=/opt/app/data/test.txt"
+    ports:
+      - 80:5000
+    volumes:
+      - app_data:/opt/app/data
+      - /etc/localtime:/etc/localtime
+    networks:
+      - exporter_network
+networks:
+  exporter_network:
+volumes:
+  app_data:
+    external: true
