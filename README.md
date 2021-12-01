@@ -2,6 +2,8 @@
 
 This application has been used to gather information of the MD5 hash of a file for tracking the file from changing.
 
+copyright 2021 mehran torkaman <torkman.mehran@gmail.com>
+
 ###################################
 #  Usage Of The File
 ###################################
